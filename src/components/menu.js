@@ -11,10 +11,10 @@ const Menu = () => {
           <Link to="/">About</Link>
         </li>
         <li>
-          <Link to="/portfolio">Portfolio</Link>
+          <Link to="/portfolio/">Portfolio</Link>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog/">Blog</Link>
         </li>
       </ul>
     </div>
