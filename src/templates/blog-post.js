@@ -8,8 +8,6 @@ export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
-  console.log(html)
-
   return (
     <Layout>
       <SEO title={frontmatter.title} />
