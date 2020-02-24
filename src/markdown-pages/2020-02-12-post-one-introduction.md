@@ -1,5 +1,5 @@
 ---
-path: "/post-one-introduction"
+path: "/blog/2020-02-12-post-one-introduction"
 date: "2020-02-12"
 title: "Introduction"
 author: "Nathaniel Mantell"

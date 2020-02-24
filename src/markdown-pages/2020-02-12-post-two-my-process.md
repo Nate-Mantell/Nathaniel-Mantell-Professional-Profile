@@ -1,5 +1,5 @@
 ---
-path: "/post-two-my-process"
+path: "/blog/2020-02-12-post-two-my-process"
 date: "2020-02-20"
 title: "My Process"
 author: "Nathaniel Mantell"
