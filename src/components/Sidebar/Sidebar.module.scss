@@ -3,7 +3,7 @@
 
 .sidebar {
   flex: 1;
-  background-color: rgb(99, 179, 179);
+  background-color: $color-sidebar-bg;
   &__inner {
     position: relative;
     padding: 25px 20px 0;
