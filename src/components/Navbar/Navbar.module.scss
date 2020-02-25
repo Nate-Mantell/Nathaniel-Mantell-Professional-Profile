@@ -1,0 +1,54 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+//Mobile
+.navbar {
+  position: relative;
+
+  &__inner {
+    position: fixed;
+    height: 100vh;
+    background-color: $color-navbar-bg;
+
+    left: 0px;
+
+    width: $layout-navbar-width;
+    max-width: $layout-navbar-width;
+
+    &__content {
+      padding: 40px;
+    }
+  }
+}
+
+//Tablet
+@include breakpoint-sm {
+  .navbar {
+    &__inner {
+      left: 0px;
+
+      width: $layout-navbar-width-sm;
+      max-width: $layout-navbar-width-sm;
+
+      &__content {
+        padding: 40px;
+      }
+    }
+  }
+}
+
+//Full Size
+@include breakpoint-md {
+  .navbar {
+    &__inner {
+      left: 0px;
+
+      width: $layout-navbar-width-md;
+      max-width: $layout-navbar-width-md;
+
+      &__content {
+        padding: 40px;
+      }
+    }
+  }
+}

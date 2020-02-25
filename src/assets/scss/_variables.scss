@@ -7,7 +7,7 @@ $color-base: #222;
 $color-primary: #5d93ff;
 $color-secondary: #f7a046;
 
-$color-sidebar-bg: rgb(99, 179, 179);
+$color-navbar-bg: rgb(99, 179, 179);
 
 $color-white: #fff;
 $color-gray: lighten($color-base, 40%);
@@ -44,3 +44,13 @@ $layout-width: 1070px;
 $layout-breakpoint-sm: 685px;
 $layout-breakpoint-md: 960px;
 $layout-breakpoint-lg: 1100px;
+
+$layout-navbar-width: 11rem;
+$layout-navbar-width-sm: 11rem;
+$layout-navbar-width-md: 11rem;
+$layout-navbar-width-lg: 11rem;
+
+$layout-content-left: $layout-navbar-width;
+$layout-content-left-sm: $layout-navbar-width-sm;
+$layout-content-left-md: $layout-navbar-width-sm;
+$layout-content-left-lg: $layout-navbar-width-sm;

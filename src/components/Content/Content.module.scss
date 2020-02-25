@@ -2,7 +2,8 @@
 @import "../../assets/scss/mixins";
 
 .content {
-  flex: 3;
+  position: absolute;
+  left: $layout-content-left;
   &__inner {
     position: relative;
     padding: 25px 20px 0;
@@ -11,7 +12,7 @@
 
 @include breakpoint-sm {
   .content {
-    flex: 3;
+    left: $layout-content-left-sm;
     &__inner {
       padding: 30px 20px 0;
     }
@@ -20,7 +21,7 @@
 
 @include breakpoint-md {
   .content {
-    flex: 3;
+    left: $layout-content-left-md;
     &__inner {
       padding: 40px;
     }

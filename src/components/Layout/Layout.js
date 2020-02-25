@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 import { withPrefix } from "gatsby"
 import { useSiteMetadata } from "../../hooks"
 import styles from "./Layout.module.scss"
-import Sidebar from "../Sidebar"
+import Navbar from "../Navbar"
 import Content from "../Content"
 
 const Layout = ({ children, title, description, socialImage }) => {
@@ -25,7 +25,7 @@ const Layout = ({ children, title, description, socialImage }) => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      <Sidebar isIndex="false" />
+      <Navbar isIndex="false" />
       <Content>{children}</Content>
     </div>
   )
