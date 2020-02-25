@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "nathanielmantell-professional",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A professional static website adapted from gatsby-starter-lumen",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Nathaniel Mantell",
   "dependencies": {
     "gatsby": "^2.19.19",
     "gatsby-cli": "^2.8.30",
