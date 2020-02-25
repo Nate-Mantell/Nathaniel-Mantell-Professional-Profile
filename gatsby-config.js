@@ -1,8 +1,17 @@
+"use strict"
+
+const siteConfig = require("./config.js")
+
 module.exports = {
+  pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
-    title: `Nathaniel Mantell - Software Professional`,
-    description: `Nathaniel Mantell is a web software developer, specializing in product and project management`,
-    author: `Nathaniel Mantell`,
+    url: siteConfig.url,
+    title: siteConfig.title,
+    subtitle: siteConfig.subtitle,
+    copyright: siteConfig.copyright,
+    disqusShortname: siteConfig.disqusShortname,
+    menu: siteConfig.menu,
+    author: siteConfig.author,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,7 +51,29 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/media`,
+        name: "media",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "css",
+        path: `${__dirname}/static/css`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/static`,
+      },
+    },
     "gatsby-transformer-remark",
+    "gatsby-plugin-sass",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

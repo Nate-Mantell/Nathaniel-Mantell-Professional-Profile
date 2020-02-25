@@ -2,12 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
 
 const Blog = ({ data }) => (
-  <Layout>
-    <SEO title="Blog" />
+  <Layout
+    title="Blog"
+    description="Articles about web software development"
+    socialImage="photo.jpg"
+  >
     <h1>Latest Posts</h1>
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>

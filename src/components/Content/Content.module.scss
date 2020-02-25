@@ -1,0 +1,28 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.content {
+  flex: 3;
+  &__inner {
+    position: relative;
+    padding: 25px 20px 0;
+  }
+}
+
+@include breakpoint-sm {
+  .content {
+    flex: 3;
+    &__inner {
+      padding: 30px 20px 0;
+    }
+  }
+}
+
+@include breakpoint-md {
+  .content {
+    flex: 3;
+    &__inner {
+      padding: 40px;
+    }
+  }
+}
