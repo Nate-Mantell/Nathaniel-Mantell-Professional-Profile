@@ -34,6 +34,7 @@
 //Mobile
 .sidenavbar {
   position: relative;
+  display: none;
 
   &__inner {
     position: fixed;
@@ -63,6 +64,8 @@
 //Tablet
 @include breakpoint-sm {
   .sidenavbar {
+    display: block;
+
     &__inner {
       height: 100vh;
 
@@ -85,6 +88,8 @@
 //Full Size
 @include breakpoint-md {
   .sidenavbar {
+    display: block;
+
     &__inner {
       height: 100vh;
 
