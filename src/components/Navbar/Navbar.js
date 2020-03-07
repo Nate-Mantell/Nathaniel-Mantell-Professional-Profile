@@ -74,9 +74,9 @@ class Navbar extends React.Component {
 
     return (
       <Fragment>
-        <div className={styles["navbar"]}>
-          <div className={styles["navbar__inner"]}>
-            <div className={styles["navbar__inner__content"]}>
+        <div className={styles["sidenavbar"]}>
+          <div className={styles["sidenavbar__inner"]}>
+            <div className={styles["sidenavbar__inner__content"]}>
               <Author author={author} isIndex={false} />
               <Menu menu={menu} />
               <Contacts contacts={author.contacts} />

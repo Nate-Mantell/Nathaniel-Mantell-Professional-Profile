@@ -32,7 +32,7 @@
 }
 
 //Mobile
-.navbar {
+.sidenavbar {
   position: relative;
 
   &__inner {
@@ -42,8 +42,8 @@
 
     left: 0px;
 
-    width: $layout-navbar-width;
-    max-width: $layout-navbar-width;
+    width: $layout-sidenavbar-width;
+    max-width: $layout-sidenavbar-width;
 
     background-color: $color-navbar-bg;
 
@@ -62,14 +62,14 @@
 
 //Tablet
 @include breakpoint-sm {
-  .navbar {
+  .sidenavbar {
     &__inner {
       height: 100vh;
 
       left: 0px;
 
-      width: $layout-navbar-width-sm;
-      max-width: $layout-navbar-width-sm;
+      width: $layout-sidenavbar-width-sm;
+      max-width: $layout-sidenavbar-width-sm;
 
       &__content {
         padding: 40px;
@@ -84,14 +84,14 @@
 
 //Full Size
 @include breakpoint-md {
-  .navbar {
+  .sidenavbar {
     &__inner {
       height: 100vh;
 
       left: 0px;
 
-      width: $layout-navbar-width-md;
-      max-width: $layout-navbar-width-md;
+      width: $layout-sidenavbar-width-md;
+      max-width: $layout-sidenavbar-width-md;
 
       &__content {
         padding: 40px;
