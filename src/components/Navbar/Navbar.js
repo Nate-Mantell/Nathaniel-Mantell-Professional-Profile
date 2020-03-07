@@ -60,6 +60,7 @@ class Navbar extends React.Component {
       return (
         <HamburgerMenuItem
           key={index}
+          open={this.state.menuOpen}
           delay={`${index * 0.1}s`}
           onClick={() => {
             this.handleLinkClick()

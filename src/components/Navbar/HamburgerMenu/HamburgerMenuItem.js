@@ -6,6 +6,7 @@ class HamburgerMenuItem extends React.Component {
     super(props)
     this.state = {
       hover: false,
+      open: this.props.open ? this.props.open : false,
     }
   }
 
@@ -14,7 +15,7 @@ class HamburgerMenuItem extends React.Component {
   }
 
   render() {
-    const dynamicStyles = {
+    /*const dynamicStyles = {
       container: {
         animationDelay: this.props.delay,
       },
@@ -24,12 +25,16 @@ class HamburgerMenuItem extends React.Component {
       line: {
         animationDelay: this.props.delay,
       },
-    }
+    }*/
     return (
       <div className={styles["container"]}>
         <div
           role="link"
-          className={styles["menuItem"]}
+          className={
+            this.props.open
+              ? styles["menuItem_open"]
+              : styles["menuItem_closed"]
+          }
           onMouseEnter={() => {
             this.handleHover()
           }}
