@@ -7,15 +7,28 @@
   top: 0;
   left: 0;
   z-index: 99;
-  display: flex;
-  align-items: center;
-  background: black;
+  //display: flex;
+  //flex-direction: row;
+  //display: inline-block;
+  //align-items: center;
+  //justify-content: space-between;
+  background: $color-navbar-bg;
   width: 100%;
-  color: white;
+  height: 4em;
+  color: $typographic-menu-font-color;
 }
 
 .logo_mobile {
-  margin: 0 auto;
+  position: relative;
+  display: block;
+  margin: 0.2em auto;
+  align-items: center;
+  height: 100%;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+  }
 }
 
 //Mobile
@@ -42,7 +55,9 @@
 
 .burgermenu_container {
   position: fixed;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 //Tablet

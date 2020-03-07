@@ -3,19 +3,23 @@
 @import "./hamburgermenu-transitions.css";
 
 .container {
-  height: 32px;
-  width: 32px;
+  //height: 32px;
+  //width: 32px;
+  height: 3em;
+  width: 3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 4px;
+  padding: 0.5em;
 }
 
 .line {
-  height: 2px;
-  width: 20px;
+  //height: 2px;
+  //width: 20px;
+  height: 4px;
+  width: 1.5em;
   background: $color-hamburger-button-foreground;
   transition: all 0.2s ease;
 }
@@ -64,14 +68,10 @@
 
 .lineBottom_open {
   @extend .lineBottom;
-  transform: translateX(-1px) rotate(-45deg);
-  transform-origin: top left;
-  margin-top: 5px;
+  transform: translateX(-2px) translateY(-1px) rotate(-45deg);
 }
 
 .lineBottom_closed {
   @extend .lineBottom;
   transform: none;
-  transform-origin: top left;
-  margin-top: 5px;
 }

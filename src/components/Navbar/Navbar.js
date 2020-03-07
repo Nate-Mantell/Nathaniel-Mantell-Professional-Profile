@@ -94,7 +94,7 @@ class Navbar extends React.Component {
             color="white"
           />
           <div className={styles["logo_mobile"]} id="BurgerMenuLogo">
-            {author.name}
+            <h1>{author.name}</h1>
           </div>
         </div>
         <HamburgerMenu open={this.state.menuOpen}>{menuItems}</HamburgerMenu>
