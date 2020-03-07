@@ -1,0 +1,77 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+@import "./hamburgermenu-transitions.css";
+
+.container {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.line {
+  height: 2px;
+  width: 20px;
+  background: $color-hamburger-button-foreground;
+  transition: all 0.2s ease;
+}
+
+.lineTop {
+  @extend .line;
+  transform: none;
+  transform-origin: top left;
+  margin-bottom: 5px;
+}
+
+.lineTop_open {
+  @extend .lineTop;
+  transform: rotate(45deg);
+}
+
+.lineTop_closed {
+  @extend .lineTop;
+  transform: none;
+}
+
+.lineMiddle {
+  @extend .line;
+  opacity: 1;
+  transform: none;
+}
+
+.lineMiddle_open {
+  @extend .lineMiddle;
+  opacity: 0;
+  transform: translateX(-16px);
+}
+
+.lineMiddle_closed {
+  @extend .lineMiddle;
+  opacity: 1;
+  transform: none;
+}
+
+.lineBottom {
+  @extend .line;
+  transform: none;
+  transform-origin: top left;
+  margin-top: 5px;
+}
+
+.lineBottom_open {
+  @extend .lineBottom;
+  transform: translateX(-1px) rotate(-45deg);
+  transform-origin: top left;
+  margin-top: 5px;
+}
+
+.lineBottom_closed {
+  @extend .lineBottom;
+  transform: none;
+  transform-origin: top left;
+  margin-top: 5px;
+}

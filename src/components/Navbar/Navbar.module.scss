@@ -1,19 +1,38 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+//General
+.burgermenu_container {
+  //position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  background: black;
+  width: 100%;
+  color: white;
+}
+
+.logo_mobile {
+  margin: 0 auto;
+}
+
 //Mobile
 .navbar {
   position: relative;
 
   &__inner {
     position: fixed;
-    height: 100vh;
-    background-color: $color-navbar-bg;
+
+    height: 2em;
 
     left: 0px;
 
     width: $layout-navbar-width;
     max-width: $layout-navbar-width;
+
+    background-color: $color-navbar-bg;
 
     &__content {
       padding: 40px;
@@ -21,10 +40,17 @@
   }
 }
 
+.burgermenu_container {
+  position: fixed;
+  display: block;
+}
+
 //Tablet
 @include breakpoint-sm {
   .navbar {
     &__inner {
+      height: 100vh;
+
       left: 0px;
 
       width: $layout-navbar-width-sm;
@@ -35,12 +61,18 @@
       }
     }
   }
+
+  .burgermenu_container {
+    display: none;
+  }
 }
 
 //Full Size
 @include breakpoint-md {
   .navbar {
     &__inner {
+      height: 100vh;
+
       left: 0px;
 
       width: $layout-navbar-width-md;
@@ -50,5 +82,9 @@
         padding: 40px;
       }
     }
+  }
+
+  .burgermenu_container {
+    display: none;
   }
 }

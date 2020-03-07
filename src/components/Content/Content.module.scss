@@ -1,6 +1,7 @@
 @import "../../assets/scss/variables";
 @import "../../assets/scss/mixins";
 
+//Mobile
 .content {
   position: absolute;
   left: $layout-content-left;
@@ -10,6 +11,7 @@
   }
 }
 
+//Tablet
 @include breakpoint-sm {
   .content {
     left: $layout-content-left-sm;
@@ -19,6 +21,7 @@
   }
 }
 
+//Full Size
 @include breakpoint-md {
   .content {
     left: $layout-content-left-md;

@@ -25,7 +25,7 @@ const Layout = ({ children, title, description, socialImage }) => {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-      <Navbar isIndex="false" />
+      <Navbar isIndex="false" siteMetadata={useSiteMetadata()} />
       <Content>{children}</Content>
     </div>
   )

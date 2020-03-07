@@ -1,0 +1,31 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+@import "./hamburgermenu-transitions.css";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: $color-navbar-bg;
+  color: #fafafa;
+  z-index: 2;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.container_open {
+  @extend .container;
+  height: 100%;
+}
+
+.container_closed {
+  @extend .container;
+  height: 0;
+}
+
+.menuList {
+  padding-top: 3rem;
+}
