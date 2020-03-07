@@ -1,4 +1,5 @@
 import React from "react"
+import styles from "./HamburgerMenuItem.module.scss"
 
 class HamburgerMenuItem extends React.Component {
   constructor(props) {
@@ -13,37 +14,22 @@ class HamburgerMenuItem extends React.Component {
   }
 
   render() {
-    const styles = {
+    const dynamicStyles = {
       container: {
-        opacity: 0,
-        animation: "1s appear forwards",
         animationDelay: this.props.delay,
       },
       menuItem: {
-        fontFamily: `'Open Sans', sans-serif`,
-        fontSize: "1.2rem",
-        padding: "1rem 0",
-        margin: "0 5%",
-        cursor: "pointer",
-        color: this.state.hover ? "gray" : "#fafafa",
-        transition: "color 0.2s ease-in-out",
-        animation: "0.5s slideIn forwards",
         animationDelay: this.props.delay,
       },
       line: {
-        width: "90%",
-        height: "1px",
-        background: "gray",
-        margin: "0 auto",
-        animation: "0.5s shrink forwards",
         animationDelay: this.props.delay,
       },
     }
     return (
-      <div style={styles.container}>
+      <div className={styles["container"]}>
         <div
           role="link"
-          style={styles.menuItem}
+          className={styles["menuItem"]}
           onMouseEnter={() => {
             this.handleHover()
           }}
@@ -54,7 +40,6 @@ class HamburgerMenuItem extends React.Component {
         >
           {this.props.children}
         </div>
-        <div style={styles.line} />
       </div>
     )
   }
