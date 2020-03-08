@@ -1,5 +1,6 @@
 // @flow strict
 import React, { Fragment } from "react"
+import { Link } from "gatsby"
 import Author from "./Author"
 import Contacts from "./Contacts"
 import Copyright from "./Copyright"
@@ -55,8 +56,10 @@ class Navbar extends React.Component {
         transition: "filter 0.5s ease",
       },
     }*/
-    const bmenu = ["About", "Blog", "Portfolio", "Contact"]
-    const menuItems = bmenu.map((val, index) => {
+
+    const { author, copyright, menu } = this.props.siteMetadata
+
+    const menuItems = menu.map(({ path, label }, index) => {
       return (
         <HamburgerMenuItem
           key={index}
@@ -66,12 +69,10 @@ class Navbar extends React.Component {
             this.handleLinkClick()
           }}
         >
-          {val}
+          <Link to={path}>{label}</Link>
         </HamburgerMenuItem>
       )
     })
-
-    const { author, copyright, menu } = this.props.siteMetadata
 
     return (
       <Fragment>
