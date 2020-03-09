@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -27,6 +28,7 @@ export default function Template({ data }) {
           className={styles["post__body"]}
           dangerouslySetInnerHTML={{ __html: html }}
         ></div>
+        <Link to="/blog/">Browse more articles</Link>
       </div>
     </Layout>
   )
