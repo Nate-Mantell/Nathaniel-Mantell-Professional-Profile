@@ -6,7 +6,7 @@ module.exports = {
   title: "Nathaniel Mantell - Web Software Developer",
   subtitle:
     "Welcome to my professional profile. I am a web software developer with 7+ years of experience.",
-  copyright: "© 2020 Nathaniel Mantell, All rights reserved.",
+  copyright: "© 2020 Nathaniel Mantell. All rights reserved.",
   disqusShortname: "",
   postsPerPage: 4,
   googleAnalyticsId: "",
