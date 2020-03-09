@@ -24,10 +24,34 @@
   margin: 0.2em auto;
   align-items: center;
   height: 100%;
+
+  color: $typographic-menu-font-color;
+
   h1 {
     margin: 0;
     padding: 0;
     font-size: 2em;
+  }
+}
+
+.sidenavbar {
+  &__inner {
+    background-color: $color-navbar-bg;
+
+    color: $typographic-menu-font-color;
+
+    a {
+      color: $typographic-menu-link-color;
+
+      :hover,
+      :focus {
+        color: $typographic-menu-link-hover-color;
+      }
+    }
+
+    &__content {
+      color: $typographic-menu-font-color;
+    }
   }
 }
 
@@ -46,10 +70,8 @@
     width: $layout-sidenavbar-width;
     max-width: $layout-sidenavbar-width;
 
-    background-color: $color-navbar-bg;
-
     &__content {
-      padding: 40px;
+      padding: $layout-sidenavbar-padding;
     }
   }
 }
@@ -75,7 +97,7 @@
       max-width: $layout-sidenavbar-width-sm;
 
       &__content {
-        padding: 40px;
+        padding: $layout-sidenavbar-padding-sm;
       }
     }
   }
@@ -99,7 +121,7 @@
       max-width: $layout-sidenavbar-width-md;
 
       &__content {
-        padding: 40px;
+        padding: $layout-sidenavbar-padding-md;
       }
     }
   }

@@ -3,19 +3,33 @@
  */
 
 // Colors
-$color-base: #222;
-$color-primary: #5d93ff;
-$color-secondary: #f7a046;
-$color-tertiary: white;
-
-$color-navbar-bg: rgb(99, 179, 179);
-
-$color-hamburger-button-foreground: white;
+//$color-base: #3e3d3d;
+$color-base: black;
+$color-primary: #4eb9fc;
+$color-secondary: #009dff;
+$color-navbar-primary: #fffc20;
+$color-navbar-secondary: #ffae00;
+$color-navbar-tertiary: white;
 
 $color-white: #fff;
 $color-gray: lighten($color-base, 40%);
 $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
+
+$color-content-bg: white;
+//$color-navbar-bg: rgb(46, 199, 255);
+//$color-navbar-bg: rgb(99, 179, 179);
+//$color-navbar-bg: #0bb;
+$color-navbar-bg: #00a4a4;
+
+$color-hamburger-button-foreground: mix(
+  $color-navbar-primary,
+  $color-navbar-bg,
+  80%
+);
+$opacity-hamburger-button: 1;
+
+$opacity-copyright: 0.75;
 
 // Typographic
 $typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -30,7 +44,11 @@ $typographic-base-line-height: 1.625;
 $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
-$typographic-menu-font-color: $color-tertiary;
+
+$typographic-menu-font-color: $color-navbar-primary;
+$typographic-menu-link-color: $color-navbar-primary;
+$typographic-menu-link-hover-color: $color-navbar-secondary;
+$typographic-menu-link-active-color: $color-navbar-primary;
 
 $typographic-leading: round(
   16 * ($typographic-root-font-size / 100) * $typographic-base-line-height
@@ -49,10 +67,30 @@ $layout-breakpoint-sm: 685px;
 $layout-breakpoint-md: 960px;
 $layout-breakpoint-lg: 1100px;
 
-$layout-sidenavbar-width: 100%;
-$layout-sidenavbar-width-sm: 11rem;
-$layout-sidenavbar-width-md: 11rem;
-$layout-sidenavbar-width-lg: 11rem;
+$layout-sidenavbar-width: 14rem;
+$layout-sidenavbar-width-sm: 14rem;
+$layout-sidenavbar-width-md: 14rem;
+$layout-sidenavbar-width-lg: 14rem;
+
+$layout-sidenavbar-padding: 2rem;
+$layout-sidenavbar-padding-sm: 2rem;
+$layout-sidenavbar-padding-md: 2rem;
+$layout-sidenavbar-padding-lg: 2rem;
+
+/*
+$layout-sidenavbar-avatar-width: $layout-sidenavbar-width -
+  $layout-sidenavbar-padding;
+$layout-sidenavbar-avatar-width-sm: $layout-sidenavbar-width-sm -
+  $layout-sidenavbar-padding-sm;
+$layout-sidenavbar-avatar-width-md: $layout-sidenavbar-width-md -
+  $layout-sidenavbar-padding-md;
+$layout-sidenavbar-avatar-width-lg: $layout-sidenavbar-width-lg -
+  $layout-sidenavbar-padding-lg;
+*/
+$layout-sidenavbar-avatar-width: 147px;
+$layout-sidenavbar-avatar-width-sm: $layout-sidenavbar-avatar-width;
+$layout-sidenavbar-avatar-width-md: $layout-sidenavbar-avatar-width;
+$layout-sidenavbar-avatar-width-lg: $layout-sidenavbar-avatar-width;
 
 $layout-content-left: 0px;
 $layout-content-left-sm: $layout-sidenavbar-width-sm;

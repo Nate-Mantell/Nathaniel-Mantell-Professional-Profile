@@ -21,6 +21,7 @@
   height: 4px;
   width: 1.5em;
   background: $color-hamburger-button-foreground;
+  opacity: $opacity-hamburger-button;
   transition: all 0.2s ease;
 }
 
@@ -43,7 +44,7 @@
 
 .lineMiddle {
   @extend .line;
-  opacity: 1;
+  opacity: $opacity-hamburger-button;
   transform: none;
 }
 
@@ -55,7 +56,7 @@
 
 .lineMiddle_closed {
   @extend .lineMiddle;
-  opacity: 1;
+  opacity: $opacity-hamburger-button;
   transform: none;
 }
 

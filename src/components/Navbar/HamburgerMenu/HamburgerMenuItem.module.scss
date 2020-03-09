@@ -10,13 +10,22 @@
 
 .menuItem {
   font-size: 1.8rem;
-  color: $typographic-menu-font-color;
+  color: $typographic-menu-link-color;
   //padding: 1rem 0;
-  margin: 0 auto;
+  margin: 0 1em;
   cursor: pointer;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   transition: opacity 3s ease-in-out, color 3s ease-in-out;
+
+  a {
+    color: $typographic-menu-link-color;
+
+    :hover,
+    :focus {
+      color: $typographic-menu-link-color;
+    }
+  }
 }
 
 @keyframes appear {
