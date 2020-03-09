@@ -31,6 +31,7 @@ const Blog = ({ data }) => (
               Posted by {post.node.frontmatter.author} on{" "}
               {post.node.frontmatter.date}
             </small>
+            <p>{post.node.excerpt}</p>
             <br />
             <br />
             <Link to={post.node.frontmatter.path}>Read More</Link>
@@ -56,6 +57,7 @@ export const pageQuery = graphql`
             path
             title
           }
+          excerpt(pruneLength: 280)
         }
       }
     }
