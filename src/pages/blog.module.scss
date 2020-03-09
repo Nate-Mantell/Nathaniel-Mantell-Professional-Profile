@@ -1,0 +1,12 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.container {
+  width: 100%;
+}
+
+.post_list {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 10vw;
+}
