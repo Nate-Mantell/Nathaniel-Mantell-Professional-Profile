@@ -1,10 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import Layout from "../components/Layout"
 
 import styles from "./blog.module.scss"
+
+const handleLinkClick = path => {
+  navigate(path)
+}
 
 const Blog = ({ data }) => (
   <Layout
@@ -16,7 +20,12 @@ const Blog = ({ data }) => (
       <h1>Latest Posts</h1>
       <div className={styles["post_list"]} id="blogPostList">
         {data.allMarkdownRemark.edges.map(post => (
-          <div key={post.node.id}>
+          <div
+            key={post.node.id}
+            role="link"
+            className={styles["post_summary"]}
+            onClick={() => handleLinkClick(post.node.frontmatter.path)}
+          >
             <h3>{post.node.frontmatter.title}</h3>
             <small>
               Posted by {post.node.frontmatter.author} on{" "}
