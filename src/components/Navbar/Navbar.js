@@ -59,20 +59,29 @@ class Navbar extends React.Component {
 
     const { author, copyright, menu } = this.props.siteMetadata
 
-    const menuItems = menu.map(({ path, label }, index) => {
-      return (
-        <HamburgerMenuItem
-          key={index}
-          open={this.state.menuOpen}
-          delay={`${index * 0.1}s`}
-          onClick={() => {
-            this.handleLinkClick()
-          }}
-        >
-          <Link to={path}>{label}</Link>
-        </HamburgerMenuItem>
-      )
-    })
+    const menuItems = [
+      ...menu.map(({ path, label }, index) => {
+        return (
+          <HamburgerMenuItem
+            key={index}
+            open={this.state.menuOpen}
+            delay={`${index * 0.1}s`}
+            onClick={() => {
+              this.handleLinkClick()
+            }}
+          >
+            <Link to={path}>{label}</Link>
+          </HamburgerMenuItem>
+        )
+      }),
+      <HamburgerMenuItem
+        key={"hamburgerMenuContacts"}
+        open={this.state.menuOpen}
+        delay={`${5 * 0.1}s`}
+      >
+        <Contacts contacts={author.contacts} />
+      </HamburgerMenuItem>,
+    ]
 
     return (
       <Fragment>
