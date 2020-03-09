@@ -1,0 +1,22 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.post {
+  &__title {
+    color: $color-base;
+  }
+
+  &__info {
+    color: $color-quaternary;
+    font-weight: 60;
+
+    &__important {
+      color: $color-tertiary;
+      font-weight: 100;
+    }
+  }
+
+  &__body {
+    color: $color-base;
+  }
+}

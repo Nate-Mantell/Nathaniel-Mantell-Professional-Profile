@@ -5,16 +5,19 @@
 // Colors
 //$color-base: #3e3d3d;
 $color-base: black;
-$color-primary: #4eb9fc;
-$color-secondary: #009dff;
-$color-navbar-primary: #fffc20;
-$color-navbar-secondary: #ffae00;
-$color-navbar-tertiary: white;
 
 $color-white: #fff;
 $color-gray: lighten($color-base, 40%);
 $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
+
+$color-primary: #4eb9fc;
+$color-secondary: #009dff;
+$color-tertiary: lighten($color-gray, 25%);
+$color-quaternary: lighten($color-tertiary, 10%);
+$color-navbar-primary: #fffc20;
+$color-navbar-secondary: #ffae00;
+$color-navbar-tertiary: white;
 
 $color-content-bg: white;
 //$color-navbar-bg: rgb(46, 199, 255);
