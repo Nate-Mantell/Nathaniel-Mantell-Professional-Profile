@@ -7,7 +7,7 @@
   left: $layout-content-left;
   &__inner {
     position: relative;
-    padding: 25px 20px 0;
+    padding: 0em 4em 0;
   }
 }
 
@@ -16,7 +16,7 @@
   .content {
     left: $layout-content-left-sm;
     &__inner {
-      padding: 30px 20px 0;
+      padding: 30px 2.4em 0;
     }
   }
 }
@@ -26,7 +26,7 @@
   .content {
     left: $layout-content-left-md;
     &__inner {
-      padding: 40px;
+      padding: 30px 2.4em 0;
     }
   }
 }
