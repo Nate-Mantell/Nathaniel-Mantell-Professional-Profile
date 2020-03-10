@@ -12,6 +12,20 @@
 
   .post_summary {
     cursor: pointer;
+
+    &__title {
+      color: $color-base;
+    }
+
+    &__info {
+      color: darken($color-quaternary, 20%);
+      font-weight: 60;
+
+      &__important {
+        color: darken($color-tertiary, 20%);
+        font-weight: 100;
+      }
+    }
   }
 
   .post_summary_separator {

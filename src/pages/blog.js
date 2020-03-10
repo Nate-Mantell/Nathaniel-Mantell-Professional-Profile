@@ -26,10 +26,18 @@ const Blog = ({ data }) => (
             className={styles["post_summary"]}
             onClick={() => handleLinkClick(post.node.frontmatter.path)}
           >
-            <h3>{post.node.frontmatter.title}</h3>
-            <small>
-              Posted by {post.node.frontmatter.author} on{" "}
-              {post.node.frontmatter.date}
+            <h3 className={styles["post_summary__title"]}>
+              {post.node.frontmatter.title}
+            </h3>
+            <small className={styles["post_summary__info"]}>
+              Posted by{" "}
+              <span className={styles["post_summary__info__important"]}>
+                {post.node.frontmatter.author}
+              </span>{" "}
+              on{" "}
+              <span className={styles["post_summary__info__important"]}>
+                {post.node.frontmatter.date}
+              </span>
             </small>
             <p>{post.node.excerpt}</p>
             <Link to={post.node.frontmatter.path}>Read More</Link>
