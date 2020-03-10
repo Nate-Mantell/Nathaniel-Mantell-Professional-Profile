@@ -32,12 +32,10 @@ const Blog = ({ data }) => (
               {post.node.frontmatter.date}
             </small>
             <p>{post.node.excerpt}</p>
-            <br />
-            <br />
             <Link to={post.node.frontmatter.path}>Read More</Link>
             <br />
             <br />
-            <hr />
+            <div className={styles["post_summary_separator"]}></div>
           </div>
         ))}
       </div>

@@ -13,4 +13,11 @@
   .post_summary {
     cursor: pointer;
   }
+
+  .post_summary_separator {
+    background: $color-gray-border;
+    height: 1px;
+    width: 50%;
+    box-shadow: 0px 1px 2px $color-gray-border;
+  }
 }
