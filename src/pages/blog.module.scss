@@ -29,9 +29,10 @@
   }
 
   .post_summary_separator {
-    background: $color-gray-border;
+    background: none;
+    border: none;
     height: 1px;
     width: 50%;
-    box-shadow: 0px 1px 2px $color-gray-border;
+    box-shadow: 0px 1px 2px $color-quaternary;
   }
 }
