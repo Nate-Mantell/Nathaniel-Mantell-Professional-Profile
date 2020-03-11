@@ -53,21 +53,21 @@ class ContactPage extends React.Component {
               <span>Telephone</span>
               <input
                 type="text"
-                class="tel-number-field"
+                class="tel-number-field-1"
                 name="tel_no_1"
                 maxlength="4"
               />
               -
               <input
                 type="text"
-                class="tel-number-field"
+                class="tel-number-field-1"
                 name="tel_no_2"
                 maxlength="4"
               />
               -
               <input
                 type="text"
-                class="tel-number-field"
+                class="tel-number-field-2"
                 name="tel_no_3"
                 maxlength="10"
               />
@@ -116,26 +116,3 @@ class ContactPage extends React.Component {
 }
 
 export default ContactPage
-
-/*
-<label>
-        Name
-        <input type="text" name="name" id="name" />
-      </label>
-      <label>
-        Email
-        <input type="email" name="_replyto" id="email" />
-      </label>
-      <label>
-        Subject
-        <input type="text" name="subject" id="subject" />
-      </label>
-      <input type="text" name="_gotcha" className={styles["hidden"]} />
-      <label>
-        Message
-        <textarea name="message" id="message" rows="5" />
-      </label>
-
-      <button type="submit">Send</button>
-      <input type="reset" value="Clear" />
-*/
