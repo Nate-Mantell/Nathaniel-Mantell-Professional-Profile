@@ -92,6 +92,9 @@ We will always conduct rigorous QA an the product, ultimately running it through
 &nbsp  
 
 ![Success!](./jump-success.jpg)
+&nbsp  
+&nbsp  
+
 This is a basic description of the steps I go through on every project. I have the steps laid out in a template that can be customized for every project. I employ the template to ensure that no steps are missed, and tailor it to each project for efficiency depending on what level of service is necessary.
 
-[Contact me](/contact/) if you have any software development needs or are interested in learning more about my process.
+[Contact me](/contact/) if you are interested in learning more about my process, or have any web site or application development needs.
