@@ -1,0 +1,81 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+//General
+.name {
+  font-stretch: condensed;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: 5em;
+  &__last {
+    color: $color-navbar-bg;
+  }
+}
+
+.line {
+  background: none;
+  border: none;
+  height: 1px;
+  box-shadow: 0px 1px 2px $color-quaternary;
+}
+
+h2 {
+  color: $color-tertiary;
+}
+
+//Mobile
+.container {
+  margin-top: 6.6em;
+}
+
+.name {
+  display: none;
+}
+
+.line {
+  display: none;
+}
+
+.title {
+  text-align: left;
+}
+
+//Tablet
+@include breakpoint-sm {
+  .container {
+    margin-top: inherit;
+  }
+
+  .name {
+    display: block;
+    font-size: 3em;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .title {
+    text-align: left;
+  }
+}
+
+//Full Size
+@include breakpoint-md {
+  .container {
+    margin-top: inherit;
+  }
+
+  .name {
+    display: block;
+    font-size: 5em;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .title {
+    text-align: left;
+  }
+}
