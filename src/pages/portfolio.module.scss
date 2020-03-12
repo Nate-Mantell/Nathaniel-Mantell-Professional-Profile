@@ -1,0 +1,19 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.gallery {
+  display: block;
+
+  &__image {
+    display: inline;
+    margin: 2em;
+  }
+}
+
+.paragraph {
+  margin: 2em;
+}
+
+h4 {
+  color: $color-quaternary;
+}
