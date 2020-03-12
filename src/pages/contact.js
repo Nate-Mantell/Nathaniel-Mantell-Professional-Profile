@@ -53,23 +53,9 @@ class ContactPage extends React.Component {
               <span>Telephone</span>
               <input
                 type="text"
-                class="tel-number-field-1"
-                name="tel_no_1"
-                maxlength="4"
-              />
-              -
-              <input
-                type="text"
-                class="tel-number-field-1"
-                name="tel_no_2"
-                maxlength="4"
-              />
-              -
-              <input
-                type="text"
                 class="tel-number-field-2"
                 name="tel_no_3"
-                maxlength="10"
+                maxlength="20"
               />
             </label>
             <label for="message">
