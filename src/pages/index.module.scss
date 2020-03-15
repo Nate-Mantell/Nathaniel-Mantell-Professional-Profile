@@ -1,10 +1,14 @@
 @import "../assets/scss/variables";
 @import "../assets/scss/mixins";
 
+@import url("https://fonts.googleapis.com/css?family=Inter:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:700&display=swap");
+
 //General
 .name {
+  font-family: "Inter", sans-serif;
   font-stretch: condensed;
-  font-style: oblique;
+  //font-style: oblique;
   font-weight: bold;
   font-size: 5em;
   &__last {
@@ -37,6 +41,7 @@ h2 {
 }
 
 .title {
+  font-family: "News Cycle", sans-serif;
   text-align: left;
 }
 
