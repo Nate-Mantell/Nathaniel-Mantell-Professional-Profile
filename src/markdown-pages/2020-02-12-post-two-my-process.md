@@ -1,5 +1,5 @@
 ---
-path: "/blog/2020-02-20-post-two-my-process"
+path: "/blog/my-process"
 date: "2020-02-20"
 title: "My Process"
 author: "Nathaniel Mantell"
@@ -13,7 +13,7 @@ The process consists of the following steps:
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Define the product vision](./vision.jpg)
 
@@ -25,7 +25,7 @@ The purpose of the resultant Vision Statement is to guide and unify the team tow
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Identify users of the product](./diverse-group-silhouette.jpg)
 
@@ -39,7 +39,7 @@ Conducting a formalized analysis of the users of the product allows us to make i
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Create a product roadmap](./roadmap.jpg)
 
@@ -49,7 +49,7 @@ Every product has a goal or series of goals, and defining a Roadmap is the best 
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Create a design](./blueprint.jpg)
 
@@ -63,7 +63,7 @@ Sometimes this step is done before, or in parallel with the Roadmapping step, an
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Build the product](./developing.jpg)
 
@@ -77,7 +77,7 @@ Ths way we can get real feedback from the client and real users continuously to 
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Launch the product](./rocket-launch.jpg)
 
@@ -89,11 +89,11 @@ We will always conduct rigorous QA an the product, ultimately running it through
 &nbsp  
 &nbsp  
 &nbsp  
-&nbsp  
+&nbsp
 
 ![Success!](./jump-success.jpg)
 &nbsp  
-&nbsp  
+&nbsp
 
 This is a basic description of the steps I go through on every project. I have the steps laid out in a template that can be customized for every project. I employ the template to ensure that no steps are missed, and tailor it to each project for efficiency depending on what level of service is necessary.
 
