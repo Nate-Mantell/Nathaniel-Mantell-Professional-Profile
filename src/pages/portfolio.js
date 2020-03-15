@@ -13,6 +13,20 @@ const Portfolio = () => (
   >
     <div>
       <h1>Portfolio</h1>
+      <h2>Gypsy Housing</h2>
+      <h4>Web Application</h4>
+      <div className={styles["gallery"]}>
+        <img
+          className={styles["gallery__image"]}
+          src={withPrefix(`GypsyHousing1.jpg`)}
+          alt="Gypsy Housing example 1"
+        />
+        <img
+          className={styles["gallery__image"]}
+          src={withPrefix(`GypsyHousing2.jpg`)}
+          alt="Gypsy Housing example 2"
+        />
+      </div>
       <h2>YouMap</h2>
       <h4>iPhone App</h4>
       <div className={styles["gallery"]}>
