@@ -8,11 +8,17 @@ title: "How To Write The Perfect User Story"
 author: "Nathaniel Mantell"
 ---# The basic structure of a User Story
 
+There are different opinions on what exactly is meant by the term "user story", but this the structure of a user story in its purest form:
+
 As a... `<type of user>`
 I want... `<to do something>`
 So that... `<I can achieve some result>`
 
 # How to make an actionable ticket out of User Stories
+
+There are many ways to create actionable tickets, but below is a format I have used with success on multiple projects
+
+**Feature or Ticket Name**
 
 **User Stories:**
 
@@ -35,41 +41,52 @@ prototype 1
 graphics file 1
 
 **Background:**
-Some background info about what has been developed and user concerns and business concerns which aren't requirements for acceptance criteria
+Some background info to give context about what has already been developed, relevant events that may relate to the work that is being performed, and relevant user concerns and business concerns which aren't actually requirements for acceptance criteria
 
-# Using BDD Given.. Then.. When.. in your User Story
+# Using the BDD Given.. Then.. When.. form in your User Story
 
-Depending on the arrangement you have with your team, and the time you have to write the stories, you may go further to use the BDD technique of Given.. Then.. When..
+Depending on the arrangement you have with your team, and the time you have to write the stories, you may go further to use the "Behavioral Driven Development" technique of Given.. Then.. When..
 
-What you will want to do is to replace each Acceptance Criterion with a Given.. Then.. When.. statement.
+What you will essentially want to do is to replace each Acceptance Criterion with a Given.. Then.. When.. statement
 
-This is a very powerful technique because, if written properly using the Gherkin language syntax for example, each acceptance criterion you write can be translated directly into an automated test.
+This is a very powerful technique because, if written properly using the Gherkin language syntax for example, each acceptance criterion you write can be translated directly into an automated test
 
 This is the best practice for modern software development
 
-So, here is what that structure looks like for the Acceptance Criteria section:
+So, here is what that structure looks like for the BDD Acceptance Criteria:
 
-Acceptance Criteria:
+**Feature:** Feature Name
+As a...
+I want...
+So that...
 
-1.) Criterion 1
+**Background:**
+background info
+relevant assets
 
-a.) Criterion 1.a
+**Scenario:** Scenario 1 name
+**Given..**
+**Then..**
+**When..**
 
-i.) Given.. Then.. When..
+**Scenario:** Scenario 2 name
+**Given..**
+**Then..**
+**When..**
 
-b.) Given.. Then.. When..
-
-2.) Criterion 2
-
-a.) Given.. Then.. When..
-
-As you can see it is usually best to use the Given.. Then.. When.. structure at the bottom level of each Acceptance Criterion, with the upper levels being to describe the general need that the criterion defines
+Instead of creating an Acceptance Criteria section with a bulleted list of criteria, you use multiple Scenario statements each with Given, Then, When conditions, which can be extended with special syntax like And, and But...
 
 # Real world example User Story
 
 Here is an example from a real project I worked on, written without, and then with the BDD syntax
 
+**Property Details Page**
+
 **User Stories:**
+
+As a Client
+I want to see information about a Property
+So I can learn about the Property and determine if I want to Apply for a Lease on it
 
 As a Client
 I want to see contact information for an Agent
@@ -89,7 +106,7 @@ So I can learn more about a Property and what is involved with Applying for and 
 
 1. The number of Bathrooms should display next to the Bathrooms icon with the word “Baths” next to it
 1. Display the text in the Description field with the header “Description:” above it
-1. Display the Agent details as follows with the header “Contact me for viewings!
+1. Display the Agent details as follows
 
    a) If there is an Agent assigned to the Property, display the following:
 
@@ -114,52 +131,76 @@ See Property Details Page Epic
 
 # Example User Story with BDD syntax
 
-Now, here is the same acceptance criteria, but with the BDD syntax
+Now, here is the same ticket, user story and acceptance criteria, but written using BDD syntax
 
-**Acceptance Criteria:**
+**Feature:** Property Details Page
+As a Client
+I want to see information about a Property
+So I can learn about the Property and determine if I want to Apply for a Lease on it
 
-1.  The Property Photos must display most prominently at the top of the page
+As a Client
+I want to see contact information for an Agent
+So I can learn more about a Property and what is involved with Applying for and Leasing it
 
-        a. Feature: Property Details Page
-        Scenario: Client views the Property Details Page
+**Background:**
+See Property Details Page Epic
+Relevant wireframes are as follows
+“Property Details - Milestone 1 - Desktop Version”
+“Property Details - Milestone 1 - Mobile Version”
+“Agent Portal - Create/Edit Property”
 
-    Given the "client-user" navigates to page "property-details-page"  
-    When the "client-user" views the page
-    Then the property photos must display at the top of the page
+**Given** the "client-user" navigates to page "property-details-page"
 
-1.  The Property Title must display prominently
-1.  The Monthly Rent value must display prominently as a US Dollar value with the words “per month” after it
-1.  The number of Bedrooms should display next to a Bedrooms Icon
-1.  The number of bedrooms a Property has will simply be determined by the number in its Bedrooms field
+**Scenario:** Client views the Property Details Page  
+When the "client-user" views the page
+Then the Property Photos must display prominently at the top of the page
+And the Property Title must display prominently
+And the Monthly Rent value must display prominently as a US Dollar value
+And the words "per month" must display to the right of the Monthly Rent value
+And the value representing the number of Bedrooms must display on the page
+And a Bedrooms icon must display next to the value representing the number of Bedrooms
+And the number of Bathrooms must display on the page
+And the Bathrooms icon should display next to the number of Bathrooms
+And the word “Baths” should display to the right of the number of Bathrooms
+And the Property description text must display on the page
+And the word "Description" must display above the description text
+And the Agent Details Section must display on the page
 
-    a) If the value in the Bedrooms field is 0, then display “Studio”
+**Scenario:** Client views a Property Details Page for a Studio Apartment
+When the value in the Bedrooms field is 0
+Then display “Studio” instead of a number for the value representing the number of Bedrooms
 
-    b) If the value in the Bedrooms field is greater than or equal to 1, (>= 1), then display the value with the word “Beds” next to it
+**Scenario:** Client views a Property Details Page for an Apartment with Multiple Rooms
+When the value in the Bedrooms field is greater than or equal to 1, (>= 1)
+Then display then display the numeric value for the value representing the number of Bedrooms
+And display the word “Beds” next to the numeric value
 
-1.  The number of Bathrooms should display next to the Bathrooms icon with the word “Baths” next to it
-1.  Display the text in the Description field with the header “Description:” above it
-1.  Display the Agent details as follows with the header “Contact me for viewings!
+**Scenario:** Client views a Property Details Page for an Apartment with an Agent assigned to it
+When the Property has an Agent assigned to it
+Then display the Agent’s Profile pic in the Agent Details Section
+And display the Agent’s Name in the Agent Details Section
+And display the Agent’s Phone Number in the Agent Details Section
+And display the Agent’s Email Address in the Agent Details Section
 
-    a) If there is an Agent assigned to the Property, display the following:
+**Scenario:** Client views a Property Details Page for an Apartment with No Agent assigned to it
+When the Property has an Agent assigned to it
+Then display the Company Logo in the Agent Details Section
+And display the Company Phone Number in the Agent Details Section
+And display the Company Email Address in the Agent Details Section
 
-    1. The Agent’s Profile pic
-    1. The Agent’s Name
-    1. The Agent’s Phone Number
-    1. The Agent’s Email Address
-
-    b) If there is no Agent assigned to the Property, display the following
-
-    1. The Company Logo
-    1. The Company Phone Number
-    1. The Company Email Address
+> Note:
+> This feature could be split into a few features depending on what the team agreed to
+> Using the BDD syntax is more feature-centric while the previous ticket notation is more based around digestible and cohesive chunks of work
+> You may use the ticket notation paired with separate BDD feature files referenced from within Acceptance Criteria bullets
+> It all depends on team preferences. I wrote the above for a very small team of myself and two developers, so it made the most sense to do it the way I have presented
 
 # How to define the "User"
 
-The "User" will be whoever is going to be using the product. There will be different users, In UML you create "roles" to define the different types of users. According to Agile you should create Personas, a few for each role, which give your roles character that the business can understand and give you insight as to market dynamics and how to wrangle up users from the real world who may actually use your product. Collectively this will become what I would call your "User Model", which you will work off of as you write your user stories. I will create another article dedicate to this.
+The "User" will be whoever is going to be using the product. There will be different users, In UML you create "roles" to define the different types of users. According to Agile you should create Personas, a few for each role, which give your roles character that the business can understand and give you insight as to market dynamics and how to wrangle up users from the real world who may actually use your product. Collectively this will become what could be called your "User Model", which you will work off of as you write your user stories. I will create another article dedicated to this.
 
 The user could be a customer who will interact with your website and sign up as a member, or they could be an admin who will be using the admin tool to moderate a site or upload content, they could be a business client in the case of a B2B product. So literally, whoever is going to be using your product you will have to create user stories for.
 
-Here are some examples of how the user stories might look, which exemplify different types of users:
+Here are some examples of how the user stories might look which exemplify different types of users:
 
 As a site member
 I want to view the different subscription levels
@@ -181,23 +222,27 @@ So that I can put their name on the package when I ship the product to the custo
 
 Experience is a key factor in writing user stories. There is no way around it, but you need to be experienced working in the field to get a feel for writing these things.
 
-One aspect of the art is producing actionable work. This is where the boundary between user stories and actionable "tickets" get merged a little bit.
+One aspect of the art is producing actionable work. This is where the boundary and terminology between user stories and actionable "tickets" get blurred a little bit.
 
-Typically people will use the term "User Story" when they actually mean "Ticket"
+Many times people will use the term "User Story" when they actually mean "Ticket"
 
-A pure user story is not always that actionable, but a ticket with relevant user stories and acceptance criteria must be actionable. Tickets are what you will deliver to developers and what they will work off of and notate as they go.
+A pure user story is not always that actionable, but a ticket with relevant user stories and acceptance criteria for satisfying the user story must be actionable, meaning a developer can take it and actually build something. Tickets are what will be delivered to developers and what they will work off of as they go.
 
-Sometimes there are multiple users that factor into a ticket. Typically when I write this stuff I will create a repository of User Stories and include them in a section of each ticket. Some user stories get used multiple times in various tickets. The tickets ask the developers through acceptance criteria to build something that satisfies the relevant user stories, or aspects thereof, because sometimes you can't satisfy a user story all at once.
+Some user stories get used multiple times in various tickets and sometimes there are multiple users or user stories that a single ticket is relevant to. Typically when I write this stuff I will create a repository of User Stories and include references to them in a section of each ticket.
 
-As you gain experience, you will find the most effective ways with the precious little time you have to produce actionable tickets based on your user stories. Really its a team effort to create a ticket so what I should say is you will find effective ways to participate in the production of actionable tickets that your team can work off of.
+The tickets ask the developers through acceptance criteria to build something that satisfies the relevant user stories. And as I said sometimes multiple tickets relate to one user story, because sometimes you can't satisfy a user story all at once.
+
+As you gain experience, you will find the most effective ways with the precious little time you have to produce actionable tickets based on your user stories. Really its a team effort to create a ticket, so what I should say is that you will find effective ways to participate in the production of actionable tickets that your team can work off of.
 
 # How to make your User Story "perfect"
 
-To make stories perfect you need to understand the ideal best practice for writing the stories, which takes research and staying up to date on product management techniques. But on top of that, you need to adapt your style to your team. Software teams will have varying degrees of expertise and different preferences. The Agile manifesto and subsequent philosophy espouses "people over process" as one of its core tenets, and this is one of the ways in which that tenet manifests itself in a real project. Its good to educate people over time as to the best practice, but ultimately you will want to move at the pace of your team and operate within their comfort level. Provide the with user stories, software requirements, etc. that they can understand and work off of. If they seem frustrated with you then do a meeting just to focus on how they want to see the story. Whether it be business stakeholders or developers having trouble with your stories, get them all together to each write one for you as they want it and work from there to give them what they need to work. And, wireframes and prototypes go a really long way, a picture says a thousand words.
+To make stories perfect you need to understand the ideal best practice for writing the stories, which takes research and staying up to date on product management techniques. But on top of that, you need to adapt your style to your team. Software teams will have varying degrees of expertise and different preferences. The Agile manifesto and subsequent philosophy espouses "people over process" as one of its core tenets, and this is one of the ways in which that tenet manifests itself in a real project.
+
+It's good to educate team members over time as to the best practice, but ultimately you will want to move at the pace of your team and operate within their comfort level. Provide them with user stories, software requirements, etc. that they can understand and work off of. If they seem frustrated with the way you are doing it then do a meeting just to focus on how they want to see the story. Whether it be business stakeholders or developers having trouble with your stories, get them all together to each write one for you as they want it and work from there to rethink your style so you can give them what they need to work. And, wireframes and prototypes go a really long way, a picture says a thousand words.
 
 ### Get stories from actual users
 
-I will have to write another article dedicated to this, but Agile methodologies like XP and SCRUM recommend the "customer in the room" so that the Product Manager or Business Analyst always comes up with features that the customers actually need, not just what they tihink a hypothetical customer would need. If your user is a business client you already have repertoire with or you are writing for an admin user who works at your business then its easy, but sometimes it is hard to get time with a real application user. It really really makes a difference, so you should make the investment of time and money or whatever you have to do to make this happen.
+I will have to write another article dedicated to this, but Agile methodologies like XP and SCRUM recommend the "customer in the room" so that the Product Manager or Business Analyst always comes up with features that the customers actually need, not just what they think a hypothetical customer would need. If your user is a business client you already have repertoire with or you are writing for an admin user who works at your business then its easy, but sometimes it is hard to get time with a real application user. It really really makes a difference, so you should make the investment of time and money or whatever you have to do to make this happen.
 
 ### Build your User Stories iteratively and incrementally
 
@@ -210,11 +255,18 @@ There is a caveat to this in which a product user may have a technical role, and
 
 ### Be flexible and do what your developers ask
 
-Ultimately they have to dev it, and you want them to feel comfortable (if they are asking for unreasonable things then you have to provide that feedback to the appropriate channels and consider going with different developers)
+Ultimately they have to dev it, and you want them to feel comfortable, so if they want you to structure your stories or tickets in a particular way or ask for some other kinds of deliverables, you should try to work with them. People over process, if you have talented devs that keeping them around can be more valuable than doing everything "the right way". If they are consistently asking for unreasonable things and rejecting your suggestions then you may have to provide that feedback to the appropriate channels and consider going with different developers or the team may have to be restructured.
 
 ### Work with what you got
 
-Sometimes it is not necessary or not possible to refine the details of each acceptance criterion to the point of using the BDD Given... Then... When... structure. Many teams work with a product manager and business analyst(s) who can refine the user stories to the greatest level of detail. If its just you and/or you are wearing multiple hats within the company, then you might not have enough time to go into full detail for each user story. You should use BDD practices when you are able but that level of detail can be sacrificed if necessary.
+Sometimes it is not necessary or not possible to refine the details of each acceptance criterion to the point of using the BDD Given... Then... When... structure. Many teams will staff both a product manager and business analyst(s) who can work together to refine the user stories to the greatest level of detail. If its just you and/or you are wearing multiple hats within the company, then you might not have enough time to go into full detail for each user story. You should use BDD practices when you are able but that level of detail can be sacrificed if necessary, because early and often delivery is the best way to get a quality product.
+
+### Work closely with developers
+
+If you can work closely with developers then you can gain more leeway with the way you write your user stories.
+Although they should be clear and concise and properly sized and prioritized according to business need, you don't want to spend a ton of time perfecting the user stories if you can establish constant feedback with a small team of developers.
+Feedback and iteration trumps details, as there will always arise cases you didn't expect and technical hurdles, and grey areas of interpretation.
+Always try to work with developers as closely as possible and be available to provide clarification as they need it.
 
 ### Be a developer yourself
 
