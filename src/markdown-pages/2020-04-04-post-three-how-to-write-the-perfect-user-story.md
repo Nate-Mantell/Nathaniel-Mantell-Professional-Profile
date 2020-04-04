@@ -1,4 +1,5 @@
 ---
+
 path: "/blog/how-to-write-the-perfect-user-story"
 
 date: "2020-04-04"
@@ -6,15 +7,15 @@ date: "2020-04-04"
 title: "How To Write The Perfect User Story"
 
 author: "Nathaniel Mantell"
----# The basic structure of a User Story
+---## The basic structure of a User Story
 
 There are different opinions on what exactly is meant by the term "user story", but this the structure of a user story in its purest form:
 
-As a... `<type of user>`
-I want... `<to do something>`
-So that... `<I can achieve some result>`
+As a... (type of user)  
+I want... (to do something)  
+So that... (I can achieve some result)
 
-# How to make an actionable ticket out of User Stories
+## How to make an actionable ticket out of User Stories
 
 There are many ways to create actionable tickets, but below is a format I have used with success on multiple projects
 
@@ -22,28 +23,28 @@ There are many ways to create actionable tickets, but below is a format I have u
 
 **User Stories:**
 
-As a...
-I want...
+As a...  
+I want...  
 So that...
 
 **Acceptance Criteria:**
 
-1. Criterion 1
-   a) Criterion 1.a
-   b) Criterion 1.b
-   1. Criterion 1.b.1
-1. Criterion 2
+1. Criterion 1  
+   &nbsp;&nbsp;&nbsp;a. Criterion 1.a  
+   &nbsp;&nbsp;&nbsp;b. Criterion 1.b  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Criterion 1.b.i
+2. Criterion 2
 
-**Relevant Assets:**
-wireframe 1
-wireframe 2
-prototype 1
+**Relevant Assets:**  
+wireframe 1  
+wireframe 2  
+prototype 1  
 graphics file 1
 
-**Background:**
-Some background info to give context about what has already been developed, relevant events that may relate to the work that is being performed, and relevant user concerns and business concerns which aren't actually requirements for acceptance criteria
+**Background:**  
+Some background info to give context about what has already been developed, what the future might look like, relevant events that may relate to the work that is to be performed, and relevant user concerns, business concerns, and technical concerns which aren't actually requirements for acceptance criteria
 
-# Using the BDD Given.. Then.. When.. form in your User Story
+## Using the BDD Given.. Then.. When.. form in your User Story
 
 Depending on the arrangement you have with your team, and the time you have to write the stories, you may go further to use the "Behavioral Driven Development" technique of Given.. Then.. When..
 
@@ -51,32 +52,32 @@ What you will essentially want to do is to replace each Acceptance Criterion wit
 
 This is a very powerful technique because, if written properly using the Gherkin language syntax for example, each acceptance criterion you write can be translated directly into an automated test
 
-This is the best practice for modern software development
+That makes it the best practice for modern software development
 
 So, here is what that structure looks like for the BDD Acceptance Criteria:
 
-**Feature:** Feature Name
-As a...
-I want...
+**Feature:** Feature Name  
+As a...  
+I want...  
 So that...
 
-**Background:**
-background info
+**Background:**  
+background info  
 relevant assets
 
-**Scenario:** Scenario 1 name
-**Given..**
-**Then..**
+**Scenario:** Scenario 1 name  
+**Given..**  
+**Then..**  
 **When..**
 
-**Scenario:** Scenario 2 name
-**Given..**
-**Then..**
+**Scenario:** Scenario 2 name  
+**Given..**  
+**Then..**  
 **When..**
 
 Instead of creating an Acceptance Criteria section with a bulleted list of criteria, you use multiple Scenario statements each with Given, Then, When conditions, which can be extended with special syntax like And, and But...
 
-# Real world example User Story
+## Real world example User Story
 
 Here is an example from a real project I worked on, written without, and then with the BDD syntax
 
@@ -84,117 +85,111 @@ Here is an example from a real project I worked on, written without, and then wi
 
 **User Stories:**
 
-As a Client
-I want to see information about a Property
+As a Client  
+I want to see information about a Property  
 So I can learn about the Property and determine if I want to Apply for a Lease on it
 
-As a Client
-I want to see contact information for an Agent
+As a Client  
+I want to see contact information for an Agent  
 So I can learn more about a Property and what is involved with Applying for and Leasing it
 
 **Acceptance Criteria:**
 
 1. The Property Photos must display most prominently at the top of the page
-1. The Property Title must display prominently
-1. The Monthly Rent value must display prominently as a US Dollar value with the words “per month” after it
-1. The number of Bedrooms should display next to a Bedrooms Icon
-1. The number of bedrooms a Property has will simply be determined by the number in its Bedrooms field
+2. The Property Title must display prominently
+3. The Monthly Rent value must display prominently as a US Dollar value with the words “per month” after it
+4. The number of Bedrooms should display next to a Bedrooms Icon
+5. The number of bedrooms a Property has will simply be determined by the number in its Bedrooms field  
+   &nbsp;&nbsp;&nbsp;a. If the value in the Bedrooms field is 0, then display “Studio”  
+   &nbsp;&nbsp;&nbsp;b. If the value in the Bedrooms field is greater than or equal to 1, (>= 1), then display the value with the word “Beds” next to it
+6. The number of Bathrooms should display next to the Bathrooms icon with the word “Baths” next to it
+7. Display the text in the Description field with the header “Description:” above it
+8. Display the Agent details as follows  
+   &nbsp;&nbsp;&nbsp;a. If there is an Agent assigned to the Property, display the following:  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. The Agent’s Profile pic  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. The Agent’s Name  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii. The Agent’s Phone Number  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iv. The Agent’s Email Address  
+   &nbsp;&nbsp;&nbsp;b. If there is no Agent assigned to the Property, display the following  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. The Company Logo  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. The Company Phone Number  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iii. The Company Email Address
 
-   a) If the value in the Bedrooms field is 0, then display “Studio”
-
-   b) If the value in the Bedrooms field is greater than or equal to 1, (>= 1), then display the value with the word “Beds” next to it
-
-1. The number of Bathrooms should display next to the Bathrooms icon with the word “Baths” next to it
-1. Display the text in the Description field with the header “Description:” above it
-1. Display the Agent details as follows
-
-   a) If there is an Agent assigned to the Property, display the following:
-
-   1. The Agent’s Profile pic
-   1. The Agent’s Name
-   1. The Agent’s Phone Number
-   1. The Agent’s Email Address
-
-   b) If there is no Agent assigned to the Property, display the following
-
-   1. The Company Logo
-   1. The Company Phone Number
-   1. The Company Email Address
-
-**Relevant Wireframes:**
-“Property Details - Milestone 1 - Desktop Version”
-“Property Details - Milestone 1 - Mobile Version”
+**Relevant Wireframes:**  
+“Property Details - Milestone 1 - Desktop Version”  
+“Property Details - Milestone 1 - Mobile Version”  
 “Agent Portal - Create/Edit Property”
 
-**Background:**
-See Property Details Page Epic
+**Background:**  
+See Property Details Epic
 
-# Example User Story with BDD syntax
+## Example User Story with BDD syntax
 
 Now, here is the same ticket, user story and acceptance criteria, but written using BDD syntax
 
 **Feature:** Property Details Page
-As a Client
-I want to see information about a Property
+
+As a Client  
+I want to see information about a Property  
 So I can learn about the Property and determine if I want to Apply for a Lease on it
 
-As a Client
-I want to see contact information for an Agent
+As a Client  
+I want to see contact information for an Agent  
 So I can learn more about a Property and what is involved with Applying for and Leasing it
 
-**Background:**
-See Property Details Page Epic
-Relevant wireframes are as follows
-“Property Details - Milestone 1 - Desktop Version”
-“Property Details - Milestone 1 - Mobile Version”
+**Background:**  
+See Property Details Epic  
+Relevant wireframes are as follows  
+“Property Details - Milestone 1 - Desktop Version”  
+“Property Details - Milestone 1 - Mobile Version”  
 “Agent Portal - Create/Edit Property”
 
 **Given** the "client-user" navigates to page "property-details-page"
 
 **Scenario:** Client views the Property Details Page  
-When the "client-user" views the page
-Then the Property Photos must display prominently at the top of the page
-And the Property Title must display prominently
-And the Monthly Rent value must display prominently as a US Dollar value
-And the words "per month" must display to the right of the Monthly Rent value
-And the value representing the number of Bedrooms must display on the page
-And a Bedrooms icon must display next to the value representing the number of Bedrooms
-And the number of Bathrooms must display on the page
-And the Bathrooms icon should display next to the number of Bathrooms
-And the word “Baths” should display to the right of the number of Bathrooms
-And the Property description text must display on the page
-And the word "Description" must display above the description text
+When the "client-user" views the page  
+Then the Property Photos must display prominently at the top of the page  
+And the Property Title must display prominently  
+And the Monthly Rent value must display prominently as a US Dollar value  
+And the words "per month" must display to the right of the Monthly Rent value  
+And the value representing the number of Bedrooms must display on the page  
+And a Bedrooms icon must display next to the value representing the number of Bedrooms  
+And the number of Bathrooms must display on the page  
+And the Bathrooms icon should display next to the number of Bathrooms  
+And the word “Baths” should display to the right of the number of Bathrooms  
+And the Property description text must display on the page  
+And the word "Description" must display above the description text  
 And the Agent Details Section must display on the page
 
-**Scenario:** Client views a Property Details Page for a Studio Apartment
-When the value in the Bedrooms field is 0
+**Scenario:** Client views a Property Details Page for a Studio Apartment  
+When the value in the Bedrooms field is 0  
 Then display “Studio” instead of a number for the value representing the number of Bedrooms
 
-**Scenario:** Client views a Property Details Page for an Apartment with Multiple Rooms
-When the value in the Bedrooms field is greater than or equal to 1, (>= 1)
-Then display then display the numeric value for the value representing the number of Bedrooms
+**Scenario:** Client views a Property Details Page for an Apartment with Multiple Rooms  
+When the value in the Bedrooms field is greater than or equal to 1, (>= 1)  
+Then display then display the numeric value for the value representing the number of Bedrooms  
 And display the word “Beds” next to the numeric value
 
-**Scenario:** Client views a Property Details Page for an Apartment with an Agent assigned to it
-When the Property has an Agent assigned to it
-Then display the Agent’s Profile pic in the Agent Details Section
-And display the Agent’s Name in the Agent Details Section
-And display the Agent’s Phone Number in the Agent Details Section
+**Scenario:** Client views a Property Details Page for an Apartment with an Agent assigned to it  
+When the Property has an Agent assigned to it  
+Then display the Agent’s Profile pic in the Agent Details Section  
+And display the Agent’s Name in the Agent Details Section  
+And display the Agent’s Phone Number in the Agent Details Section  
 And display the Agent’s Email Address in the Agent Details Section
 
-**Scenario:** Client views a Property Details Page for an Apartment with No Agent assigned to it
-When the Property has an Agent assigned to it
-Then display the Company Logo in the Agent Details Section
-And display the Company Phone Number in the Agent Details Section
+**Scenario:** Client views a Property Details Page for an Apartment with No Agent assigned to it  
+When the Property has an Agent assigned to it  
+Then display the Company Logo in the Agent Details Section  
+And display the Company Phone Number in the Agent Details Section  
 And display the Company Email Address in the Agent Details Section
 
-> Note:
-> This feature could be split into a few features depending on what the team agreed to
-> Using the BDD syntax is more feature-centric while the previous ticket notation is more based around digestible and cohesive chunks of work
-> You may use the ticket notation paired with separate BDD feature files referenced from within Acceptance Criteria bullets
+> Note:  
+> This feature could be split into a few features depending on what the team agreed to  
+> Using the BDD syntax is more feature-centric while the previous ticket notation is more based around digestible and cohesive chunks of work  
+> You may use the ticket notation paired with separate BDD feature files referenced from within Acceptance Criteria bullets  
 > It all depends on team preferences. I wrote the above for a very small team of myself and two developers, so it made the most sense to do it the way I have presented
 
-# How to define the "User"
+## How to define the "User"
 
 The "User" will be whoever is going to be using the product. There will be different users, In UML you create "roles" to define the different types of users. According to Agile you should create Personas, a few for each role, which give your roles character that the business can understand and give you insight as to market dynamics and how to wrangle up users from the real world who may actually use your product. Collectively this will become what could be called your "User Model", which you will work off of as you write your user stories. I will create another article dedicated to this.
 
@@ -202,23 +197,23 @@ The user could be a customer who will interact with your website and sign up as 
 
 Here are some examples of how the user stories might look which exemplify different types of users:
 
-As a site member
-I want to view the different subscription levels
+As a site member  
+I want to view the different subscription levels  
 So that I can decide whether or not to upgrade my subscription
 
-As a top level admin
-I want to change permissions for the lower level admins
+As a top level admin  
+I want to change permissions for the lower level admins  
 So that I can get fine grained control over what each admin can do
 
-As a drop ship store owner
-I want to leave a note for the supplier
+As a drop ship store owner  
+I want to leave a note for the supplier  
 So that I can define special delivery options for them to fulfill
 
-As a supplier
-I want to view the drop ship store owner who sold each product
+As a supplier  
+I want to view the drop ship store owner who sold each product  
 So that I can put their name on the package when I ship the product to the customer
 
-# The art of writing a User Story
+## The art of writing a User Story
 
 Experience is a key factor in writing user stories. There is no way around it, but you need to be experienced working in the field to get a feel for writing these things.
 
@@ -234,7 +229,7 @@ The tickets ask the developers through acceptance criteria to build something th
 
 As you gain experience, you will find the most effective ways with the precious little time you have to produce actionable tickets based on your user stories. Really its a team effort to create a ticket, so what I should say is that you will find effective ways to participate in the production of actionable tickets that your team can work off of.
 
-# How to make your User Story "perfect"
+## How to make your User Story "perfect"
 
 To make stories perfect you need to understand the ideal best practice for writing the stories, which takes research and staying up to date on product management techniques. But on top of that, you need to adapt your style to your team. Software teams will have varying degrees of expertise and different preferences. The Agile manifesto and subsequent philosophy espouses "people over process" as one of its core tenets, and this is one of the ways in which that tenet manifests itself in a real project.
 
