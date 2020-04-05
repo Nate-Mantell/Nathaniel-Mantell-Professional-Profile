@@ -147,41 +147,41 @@ Relevant wireframes are as follows
 **Given** the "client-user" navigates to page "property-details-page"
 
 **Scenario:** Client views the Property Details Page  
-When the "client-user" views the page  
-Then the Property Photos must display prominently at the top of the page  
-And the Property Title must display prominently  
-And the Monthly Rent value must display prominently as a US Dollar value  
-And the words "per month" must display to the right of the Monthly Rent value  
-And the value representing the number of Bedrooms must display on the page  
-And a Bedrooms icon must display next to the value representing the number of Bedrooms  
-And the number of Bathrooms must display on the page  
-And the Bathrooms icon should display next to the number of Bathrooms  
-And the word “Baths” should display to the right of the number of Bathrooms  
-And the Property description text must display on the page  
-And the word "Description" must display above the description text  
-And the Agent Details Section must display on the page
+**When** the "client-user" views the page  
+**Then** the Property Photos must display prominently at the top of the page  
+**And** the Property Title must display prominently  
+**And** the Monthly Rent value must display prominently as a US Dollar value  
+**And** the words "per month" must display to the right of the Monthly Rent value  
+**And** the value representing the number of Bedrooms must display on the page  
+**And** a Bedrooms icon must display next to the value representing the number of Bedrooms  
+**And** the number of Bathrooms must display on the page  
+**And** the Bathrooms icon should display next to the number of Bathrooms  
+**And** the word “Baths” should display to the right of the number of Bathrooms  
+**And** the Property description text must display on the page  
+**And** the word "Description" must display above the description text  
+**And** the Agent Details Section must display on the page
 
 **Scenario:** Client views a Property Details Page for a Studio Apartment  
-When the value in the Bedrooms field is 0  
-Then display “Studio” instead of a number for the value representing the number of Bedrooms
+**When** the value in the Bedrooms field is 0  
+**Then** display “Studio” instead of a number for the value representing the number of Bedrooms
 
 **Scenario:** Client views a Property Details Page for an Apartment with Multiple Rooms  
-When the value in the Bedrooms field is greater than or equal to 1, (>= 1)  
-Then display then display the numeric value for the value representing the number of Bedrooms  
-And display the word “Beds” next to the numeric value
+**When** the value in the Bedrooms field is greater than or equal to 1, (>= 1)  
+**Then** display then display the numeric value for the value representing the number of Bedrooms  
+**And** display the word “Beds” next to the numeric value
 
 **Scenario:** Client views a Property Details Page for an Apartment with an Agent assigned to it  
-When the Property has an Agent assigned to it  
-Then display the Agent’s Profile pic in the Agent Details Section  
-And display the Agent’s Name in the Agent Details Section  
-And display the Agent’s Phone Number in the Agent Details Section  
-And display the Agent’s Email Address in the Agent Details Section
+**When** the Property has an Agent assigned to it  
+**Then** display the Agent’s Profile pic in the Agent Details Section  
+**And** display the Agent’s Name in the Agent Details Section  
+**And** display the Agent’s Phone Number in the Agent Details Section  
+**And** display the Agent’s Email Address in the Agent Details Section
 
 **Scenario:** Client views a Property Details Page for an Apartment with No Agent assigned to it  
-When the Property has an Agent assigned to it  
-Then display the Company Logo in the Agent Details Section  
-And display the Company Phone Number in the Agent Details Section  
-And display the Company Email Address in the Agent Details Section
+**When** the Property has an Agent assigned to it  
+**Then** display the Company Logo in the Agent Details Section  
+**And** display the Company Phone Number in the Agent Details Section  
+**And** display the Company Email Address in the Agent Details Section
 
 > Note:  
 > This feature could be split into a few features depending on what the team agreed to  
