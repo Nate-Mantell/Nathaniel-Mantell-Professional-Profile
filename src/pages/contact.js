@@ -25,7 +25,7 @@ class ContactPage extends React.Component {
         <h1>Contact Me</h1>
         <p>
           You can contact me about anything! Need a website built? An
-          application? A pizza delivered?
+          application developed? A pizza delivered?
         </p>
         <p>
           Use the contact form below or send me an email at mantelln@gmail.com
