@@ -147,7 +147,17 @@ const Portfolio = () => (
 
       <h2>NathanielMantell.com</h2>
       <h4>Website</h4>
-      <p>This website was developed using GatsbyJS</p>
+      <p>
+        This website was developed using GatsbyJS
+        <br />
+        <a
+          href="https://github.com/Nate-Mantell/Nathaniel-Mantell-Professional-Profile"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View on Github
+        </a>
+      </p>
 
       <br />
       <Link to="/">Go back to the homepage</Link>
