@@ -19,6 +19,11 @@ const IndexPage = () => (
       <h2 className={styles["title"]}>
         Software Product Manager and Web Developer
       </h2>
+      <a href="https://caseysgarden.com/">CaseyTestShop</a>
+      <br />
+      <a href="https://caseysgarden.com/product-category/mothers-day/">
+        CaseyTestMothers
+      </a>
       <p>
         I am a software product manager and web developer with 7+ years of
         experience developing and delivering software products for web and

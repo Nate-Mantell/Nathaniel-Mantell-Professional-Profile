@@ -28,6 +28,14 @@ module.exports = {
       label: "Contact me",
       path: "/contact/",
     },
+    {
+      label: "CaseyTestShop",
+      path: "https://caseysgarden.com/",
+    },
+    {
+      label: "CaseyTestMothers",
+      path: "https://caseysgarden.com/product-category/mothers-day/",
+    },
   ],
   author: {
     name: "Nathaniel Mantell",
