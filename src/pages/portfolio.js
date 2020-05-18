@@ -13,6 +13,132 @@ const Portfolio = () => (
   >
     <div>
       <h1>Portfolio</h1>
+      <h2>Wordpress Examples</h2>
+      <h4>
+        E-Commerce Demo -{" "}
+        <a
+          href="http://digital.mantellsolutions.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          digital.mantellsolutions.com
+        </a>
+      </h4>
+      <h4>
+        Medical Office Site Demo -{" "}
+        <a
+          href="http://medical.mantellsolutions.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          medical.mantellsolutions.com
+        </a>
+      </h4>
+      <h4>
+        Restaurant Demo -{" "}
+        <a
+          href="http://restaurant.mantellsolutions.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          restaurant.mantellsolutions.com
+        </a>
+      </h4>
+      <h4>
+        Membership and Custom Plugin Demo -{" "}
+        <a
+          href="http://member.mantellsolutions.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          member.mantellsolutions.com
+        </a>
+      </h4>
+      <div className={styles["gallery"]}>
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`e-commerce-demo.jpg`)}
+          alt="E-Commerce Wordpress example"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`Medical-Site-Wordpress-1.jpg`)}
+          alt="Medical Site Wordpress example 1"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`Medical-Site-Wordpress-2.jpg`)}
+          alt="Medical Site Wordpress example 2"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`restaurant-demo.jpg`)}
+          alt="Restaurant Site Wordpress example"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`member-demo.jpg`)}
+          alt="Member Site Wordpress example"
+        />
+      </div>
+
+      <h2>The GetRight Spot</h2>
+      <h4>
+        Wordpress Site -{" "}
+        <a
+          href="https://thegetrightspot.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          thegetrightspot.com
+        </a>
+      </h4>
+      <div className={styles["gallery"]}>
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`thegetrightspot-home-1.jpg`)}
+          alt="The GetRight Spot"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`thegetrightspot-home-3.jpg`)}
+          alt="The GetRight Spot"
+        />
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`thegetrightspot-home-4.jpg`)}
+          alt="The GetRight Spot"
+        />
+      </div>
+
+      <h2>Casey's On Rosewood</h2>
+      <h4>
+        Wordpress Site -{" "}
+        <a
+          href="https://caseysgarden.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          caseysgarden.com
+        </a>
+      </h4>
+      <div className={styles["gallery"]}>
+        <img
+          className={styles["gallery__image"]}
+          width="80%"
+          src={withPrefix(`caseys-garden.jpg`)}
+          alt="Casey's On Rosewood Online Store"
+        />
+      </div>
+
       <h2>YouMap</h2>
       <h4>iPhone App</h4>
       <div className={styles["gallery"]}>
