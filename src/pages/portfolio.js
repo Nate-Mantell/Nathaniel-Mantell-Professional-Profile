@@ -76,7 +76,7 @@ const Portfolio = () => (
         <img
           className={styles["gallery__image"]}
           width="80%"
-          src={withPrefix(`restaurant-demo.jpg`)}
+          src={withPrefix(`restaurant-demo-2.jpg`)}
           alt="Restaurant Site Wordpress example"
         />
         <img
@@ -241,31 +241,6 @@ const Portfolio = () => (
           width="80%"
           src={withPrefix(`Smiley360-Wordpress-Blog-3.jpg`)}
           alt="Smiley360 Wordpress Blog example 3"
-        />
-      </div>
-      <h2>Medical Site Example</h2>
-      <h4>
-        Wordpress Site -{" "}
-        <a
-          href="http://medical.mantellsolutions.com"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Visit the site
-        </a>
-      </h4>
-      <div className={styles["gallery"]}>
-        <img
-          className={styles["gallery__image"]}
-          width="80%"
-          src={withPrefix(`Medical-Site-Wordpress-1.jpg`)}
-          alt="Medical Site Wordpress example 1"
-        />
-        <img
-          className={styles["gallery__image"]}
-          width="80%"
-          src={withPrefix(`Medical-Site-Wordpress-2.jpg`)}
-          alt="Medical Site Wordpress example 2"
         />
       </div>
 
